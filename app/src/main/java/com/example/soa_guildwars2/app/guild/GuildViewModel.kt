@@ -29,13 +29,7 @@ class GuildViewModel @ViewModelInject constructor(
             .subscribeOn(Schedulers.io())
             .subscribe(object : DisposableObserver<List<GuildDataModel>>() {
                 override fun onNext(t: List<GuildDataModel>?) {
-                    val a = mutableListOf<GuildDataModel>()
-                    repeat(2) {
-                        if (t != null) {
-                            a.addAll(t)
-                        }
-                    }
-                    _allGuildData.postValue(a)
+                    _allGuildData.postValue(t)
                 }
 
                 override fun onError(e: Throwable?) {
