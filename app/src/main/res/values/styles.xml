@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="OutlinedButton" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="strokeColor">@color/design_default_color_error</item>
+        <item name="strokeWidth">2dp</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:textColor">@color/design_default_color_error</item>
+
+    </style>
+</resources>

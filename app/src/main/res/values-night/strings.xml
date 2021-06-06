@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Companion</string>
+    <string name="emblem_foreground">emblem_foreground</string>
+    <string name="emblem_background">emblem_background</string>
+    <string name="daily_achievements">Daily Achievements</string>
+    <string name="see_all">SEE ALL</string>
+    <string name="world_boss">World Boss</string>
+    <string name="save">SAVE</string>
+    <string name="api_help">If you don\'t have an API Key yet, you can get one from here</string>
+    <string name="api_desc">Hi! Welcome to the Guild Wars 2 companion app. Please enter your API Key to continue</string>
+    <string name="api_hint">XXX-XXX-XXX-XXX</string>
+    <string name="copyright">a Stephen WK production ©</string>
+    <string name="character_list">Character List</string>
+    <string name="logout">Logout</string>
+    <string name="logout_desc">Are you sure you want to logout?</string>
+    <string name="guild_empty_state">Guild Empty State</string>
+    <string name="guild_empty_state_desc">Guild Wars 2 is more enjoyable with friends, so let\'s join a guild!</string>
+    <string name="back_button">Back Button</string>
+</resources>
