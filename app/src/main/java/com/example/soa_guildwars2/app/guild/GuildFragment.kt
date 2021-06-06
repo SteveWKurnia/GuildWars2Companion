@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
 import com.example.soa_guildwars2.R
@@ -48,7 +49,7 @@ class GuildFragment: Fragment() {
         adapter = GuildAdapter()
         rv_guild?.apply {
             adapter = this@GuildFragment.adapter
-            layoutManager = LinearLayoutManager(this@GuildFragment.context, LinearLayoutManager.VERTICAL,false)
+            layoutManager = GridLayoutManager(context, 2, GridLayoutManager.VERTICAL,false)
         }
     }
 

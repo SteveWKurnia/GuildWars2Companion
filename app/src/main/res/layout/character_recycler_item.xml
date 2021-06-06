@@ -1,72 +1,69 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv_character"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:padding="10dp">
+    android:layout_margin="10dp"
+    app:cardBackgroundColor="@color/material_on_surface_stroke"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="0dp"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
-    <com.google.android.material.card.MaterialCardView
-        android:id="@+id/cv_character"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:cardCornerRadius="5dp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/iv_class"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher_round" />
 
         <RelativeLayout
+            android:id="@+id/rl_expandable"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="10dp">
-
-            <ImageView
-                android:id="@+id/iv_class"
-                android:src="@mipmap/ic_launcher_round"
-                android:layout_width="40dp"
-                android:layout_height="40dp"/>
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_divider"
+            android:paddingTop="10dp">
 
             <TextView
-                android:id="@+id/tv_character_name"
-                android:text="Sleeptight"
-                android:textSize="20sp"
-                android:layout_marginStart="10dp"
+                android:id="@+id/tv_char_detail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_toEndOf="@id/iv_class"/>
+                tools:text="Lvl 80 Charr Engineer" />
 
-            <View
-                android:id="@+id/view_divider"
-                android:layout_marginTop="5dp"
+            <TextView
+                android:id="@+id/tv_char_title"
                 android:layout_width="wrap_content"
-                android:layout_height="1dp"
-                android:background="#121212"
-                android:layout_below="@id/iv_class"/>
-
-            <RelativeLayout
-                android:id="@+id/rl_expandable"
-                android:paddingTop="10dp"
-                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@id/view_divider">
-
-                <TextView
-                    android:id="@+id/tv_char_detail"
-                    android:text="Lvl 80 Charr Engineer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-
-                <TextView
-                    android:id="@+id/tv_char_title"
-                    android:text="Kingslayer"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/tv_char_detail"/>
-
-            </RelativeLayout>
+                android:layout_below="@id/tv_char_detail"
+                tools:text="Kingslayer" />
 
         </RelativeLayout>
 
-    </com.google.android.material.card.MaterialCardView>
+        <TextView
+            android:id="@+id/tv_character_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_toEndOf="@id/iv_class"
+            android:textSize="20sp"
+            tools:text="Sleeptight" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <View
+            android:id="@+id/view_divider"
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_below="@id/iv_class"
+            android:layout_marginTop="5dp"
+            android:background="#121212" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

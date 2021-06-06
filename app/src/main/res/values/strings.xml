@@ -17,4 +17,6 @@
     <string name="guild_empty_state">Guild Empty State</string>
     <string name="guild_empty_state_desc">Guild Wars 2 is more enjoyable with friends, so let\'s join a guild!</string>
     <string name="back_button">Back Button</string>
+    <string name="guild_list">Guild List</string>
+    <string name="members">Members</string>
 </resources>

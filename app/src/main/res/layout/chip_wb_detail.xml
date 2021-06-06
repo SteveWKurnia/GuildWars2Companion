@@ -1,21 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.card.MaterialCardView
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     app:cardCornerRadius="20dp"
-    app:cardElevation="0.1dp">
+    app:cardElevation="0.1dp"
+    android:layout_margin="5dp">
 
     <TextView
         android:id="@+id/tv_time"
         tools:text="16.00"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingStart="5dp"
         android:paddingEnd="5dp"
         android:paddingTop="7dp"
-        android:paddingBottom="7dp"/>
+        android:paddingBottom="7dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"/>
 
 </com.google.android.material.card.MaterialCardView>
