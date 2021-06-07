@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.soa_guildwars2">
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.soa_guildwars2"
+    android:versionCode="1"
+    android:versionName="1.0 Release">
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:name=".BaseApplication"
@@ -10,21 +15,33 @@
         android:roundIcon="@drawable/guild_wars_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.SOA_GuildWars2">
-        <activity android:name=".app.guild.guildmember.GuildMemberActivity"></activity>
-        <activity android:name=".app.guild.guilddetail.GuildDetailActivity" />
-        <activity android:name=".app.splashscreen.SplashScreenActivity">
+        <activity
+            android:name=".app.guild.guildmember.GuildMemberActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".app.guild.guilddetail.GuildDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".app.splashscreen.SplashScreenActivity"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".app.apikey.ApiKeyActivity" />
-        <activity android:name=".app.home.dailyachievements.dailyachievementsdetail.DailyDetailActivity" />
-        <activity android:name=".app.home.worldboss.worldbossdetail.WorldBossDetail" />
-        <activity android:name=".app.MainActivity" />
+        <activity
+            android:name=".app.apikey.ApiKeyActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".app.home.dailyachievements.dailyachievementsdetail.DailyDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".app.home.worldboss.worldbossdetail.WorldBossDetail"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".app.MainActivity"
+            android:screenOrientation="portrait"/>
     </application>
-
-    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>
