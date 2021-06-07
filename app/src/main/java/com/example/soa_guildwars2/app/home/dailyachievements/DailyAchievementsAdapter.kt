@@ -1,9 +1,9 @@
 package com.example.soa_guildwars2.app.home.dailyachievements
 
+import android.content.res.Configuration
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.example.soa_guildwars2.R
@@ -23,18 +23,22 @@ class DailyAchievementsAdapter: RecyclerView.Adapter<DailyAchievementsAdapter.Cu
 
     class CustomViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(achievementsModel: AchievementsModel) {
-            itemView.tv_daily_achievements?.text = achievementsModel.name
-            itemView.tv_daily_description?.text = achievementsModel.description
-            val text = "Lvl Requirement: ${achievementsModel.minLvl} - ${achievementsModel.maxLvl}"
-            itemView.tv_lvl_requirement?.text = text
-            itemView.iv_arrow_down?.setOnClickListener {
-                achievementsModel.isExpanded = !achievementsModel.isExpanded
-                itemView.rl_expandable?.visibility = if(achievementsModel.isExpanded){
-                    Glide.with(itemView).load(R.drawable.ic_baseline_keyboard_arrow_up_24).into(itemView.iv_arrow_down)
-                    View.VISIBLE
-                } else {
-                    Glide.with(itemView).load(R.drawable.ic_baseline_keyboard_arrow_down_24).into(itemView.iv_arrow_down)
-                    View.GONE
+            itemView.apply {
+                tv_daily_achievements?.text = achievementsModel.name
+                tv_daily_description?.text = achievementsModel.description
+                val text = "Lvl Requirement: ${achievementsModel.minLvl} - ${achievementsModel.maxLvl}"
+                tv_lvl_requirement?.text = text
+                cv_daily?.setOnClickListener {
+                    achievementsModel.isExpanded = !achievementsModel.isExpanded
+                    rl_expandable?.visibility = if(achievementsModel.isExpanded){
+                        iv_arrow_down?.visibility = View.GONE
+                        iv_arrow_up?.visibility = View.VISIBLE
+                        View.VISIBLE
+                    } else {
+                        iv_arrow_up?.visibility = View.GONE
+                        iv_arrow_down?.visibility = View.VISIBLE
+                        View.GONE
+                    }
                 }
             }
         }
