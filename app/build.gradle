@@ -14,8 +14,8 @@ android {
         applicationId "stephenwk.com.soa_guildwars2"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField 'String', 'API_KEY', '"86D78398-4FFE-AB44-A16D-3A02BA433C8DA4AF9E3D-E3C8-478B-A7A5-E17685705CCD"'
