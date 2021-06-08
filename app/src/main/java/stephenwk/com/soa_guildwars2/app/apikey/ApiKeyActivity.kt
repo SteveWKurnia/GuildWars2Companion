@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.text.SpannableString
 import android.text.Spanned
 import android.text.TextPaint
+import android.text.method.LinkMovementMethod
 import android.text.style.ClickableSpan
 import android.view.View
 import android.view.inputmethod.InputMethodManager
@@ -64,7 +65,10 @@ class ApiKeyActivity : AppCompatActivity() {
         }
 
         ss.setSpan(clickableSpan, ss.length - 4, ss.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
-        tv_help?.text = ss
+        tv_help?.apply {
+            movementMethod = LinkMovementMethod.getInstance()
+            text = ss
+        }
     }
 
     private var apiKeyAuthenticity: Observer<Boolean> = Observer {
