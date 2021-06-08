@@ -1,7 +1,7 @@
 package stephenwk.com.soa_guildwars2.domain.usecases
 
-import com.example.soa_guildwars2.domain.GuildRepository
-import com.example.soa_guildwars2.domain.datamodel.EmblemResourceDataModel
+import stephenwk.com.soa_guildwars2.domain.GuildRepository
+import stephenwk.com.soa_guildwars2.domain.datamodel.EmblemResourceDataModel
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 

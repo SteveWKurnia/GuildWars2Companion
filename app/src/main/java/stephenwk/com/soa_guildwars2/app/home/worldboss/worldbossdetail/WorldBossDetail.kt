@@ -7,8 +7,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSmoothScroller
 import androidx.recyclerview.widget.RecyclerView
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.home.HomeViewModel
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.home.HomeViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_daily_detail.*
 import kotlinx.android.synthetic.main.wb_detail_activity.*

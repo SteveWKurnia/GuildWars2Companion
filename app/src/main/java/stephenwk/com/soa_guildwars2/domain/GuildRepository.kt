@@ -1,8 +1,8 @@
 package stephenwk.com.soa_guildwars2.domain
 
-import com.example.soa_guildwars2.domain.datamodel.EmblemResourceDataModel
-import com.example.soa_guildwars2.domain.datamodel.GuildDataModel
-import com.example.soa_guildwars2.domain.datamodel.GuildMemberDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.EmblemResourceDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.GuildDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.GuildMemberDataModel
 import io.reactivex.rxjava3.core.Observable
 
 interface GuildRepository {

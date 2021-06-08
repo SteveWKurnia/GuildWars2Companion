@@ -8,8 +8,8 @@ import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.bumptech.glide.Glide
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.guild.guildmember.GuildMemberActivity
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.guild.guildmember.GuildMemberActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.guild_detail_activity.*
 

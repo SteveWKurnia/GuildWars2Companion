@@ -1,13 +1,13 @@
 package stephenwk.com.soa_guildwars2.data.repository
 
 import android.util.Log
-import com.example.soa_guildwars2.BuildConfig
-import com.example.soa_guildwars2.data.RetrofitInstance
-import com.example.soa_guildwars2.data.localdata.LocalApiKeySharedPref
-import com.example.soa_guildwars2.data.networkdata.CharacterData
-import com.example.soa_guildwars2.domain.CharacterRepository
-import com.example.soa_guildwars2.domain.MiscellaneousRepository
-import com.example.soa_guildwars2.domain.datamodel.CharacterDataModel
+import stephenwk.com.soa_guildwars2.BuildConfig
+import stephenwk.com.soa_guildwars2.data.RetrofitInstance
+import stephenwk.com.soa_guildwars2.data.localdata.LocalApiKeySharedPref
+import stephenwk.com.soa_guildwars2.data.networkdata.CharacterData
+import stephenwk.com.soa_guildwars2.domain.CharacterRepository
+import stephenwk.com.soa_guildwars2.domain.MiscellaneousRepository
+import stephenwk.com.soa_guildwars2.domain.datamodel.CharacterDataModel
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 

@@ -1,6 +1,6 @@
 package stephenwk.com.soa_guildwars2.domain.usecases
 
-import com.example.soa_guildwars2.domain.HomeRepository
+import stephenwk.com.soa_guildwars2.domain.HomeRepository
 import javax.inject.Inject
 
 class GetWalletData @Inject constructor(

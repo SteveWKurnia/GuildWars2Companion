@@ -6,10 +6,10 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.guild.guilddetail.GuildDetailViewModel
-import com.example.soa_guildwars2.app.guild.guilddetail.GuildMemberAdapter
-import com.example.soa_guildwars2.app.guild.guilddetail.GuildMemberModel
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.guild.guilddetail.GuildDetailViewModel
+import stephenwk.com.soa_guildwars2.app.guild.guilddetail.GuildMemberAdapter
+import stephenwk.com.soa_guildwars2.app.guild.guilddetail.GuildMemberModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_guild_member.*
 import kotlinx.android.synthetic.main.guild_detail_activity.*

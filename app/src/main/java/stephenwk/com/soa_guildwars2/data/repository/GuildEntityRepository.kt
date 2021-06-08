@@ -1,15 +1,15 @@
 package stephenwk.com.soa_guildwars2.data.repository
 
-import com.example.soa_guildwars2.BuildConfig
-import com.example.soa_guildwars2.data.RetrofitInstance
-import com.example.soa_guildwars2.data.localdata.LocalApiKeySharedPref
-import com.example.soa_guildwars2.data.models.AccountEntityData
-import com.example.soa_guildwars2.data.networkdata.AccountMainData
-import com.example.soa_guildwars2.data.networkdata.GuildData
-import com.example.soa_guildwars2.domain.GuildRepository
-import com.example.soa_guildwars2.domain.datamodel.EmblemResourceDataModel
-import com.example.soa_guildwars2.domain.datamodel.GuildDataModel
-import com.example.soa_guildwars2.domain.datamodel.GuildMemberDataModel
+import stephenwk.com.soa_guildwars2.BuildConfig
+import stephenwk.com.soa_guildwars2.data.RetrofitInstance
+import stephenwk.com.soa_guildwars2.data.localdata.LocalApiKeySharedPref
+import stephenwk.com.soa_guildwars2.data.models.AccountEntityData
+import stephenwk.com.soa_guildwars2.data.networkdata.AccountMainData
+import stephenwk.com.soa_guildwars2.data.networkdata.GuildData
+import stephenwk.com.soa_guildwars2.domain.GuildRepository
+import stephenwk.com.soa_guildwars2.domain.datamodel.EmblemResourceDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.GuildDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.GuildMemberDataModel
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 

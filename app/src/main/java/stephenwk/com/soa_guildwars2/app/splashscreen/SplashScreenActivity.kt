@@ -5,10 +5,10 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.MainActivity
-import com.example.soa_guildwars2.app.apikey.ApiKeyActivity
 import dagger.hilt.android.AndroidEntryPoint
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.MainActivity
+import stephenwk.com.soa_guildwars2.app.apikey.ApiKeyActivity
 
 @AndroidEntryPoint
 class SplashScreenActivity : AppCompatActivity() {

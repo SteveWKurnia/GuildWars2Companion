@@ -8,8 +8,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.GridLayoutManager
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.domain.datamodel.GuildDataModel
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.domain.datamodel.GuildDataModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.guild_detail_activity.*
 import kotlinx.android.synthetic.main.guild_fragment.*

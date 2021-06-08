@@ -1,11 +1,11 @@
 package stephenwk.com.soa_guildwars2.data.repository
 
-import com.example.soa_guildwars2.data.RetrofitInstance
-import com.example.soa_guildwars2.data.localdata.LocalApiKeySharedPref
-import com.example.soa_guildwars2.data.mapper.AccountDataMapper
-import com.example.soa_guildwars2.data.networkdata.AccountMainData
-import com.example.soa_guildwars2.domain.GeneralRepository
-import com.example.soa_guildwars2.domain.datamodel.AccountDataModel
+import stephenwk.com.soa_guildwars2.data.RetrofitInstance
+import stephenwk.com.soa_guildwars2.data.localdata.LocalApiKeySharedPref
+import stephenwk.com.soa_guildwars2.data.mapper.AccountDataMapper
+import stephenwk.com.soa_guildwars2.data.networkdata.AccountMainData
+import stephenwk.com.soa_guildwars2.domain.GeneralRepository
+import stephenwk.com.soa_guildwars2.domain.datamodel.AccountDataModel
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 

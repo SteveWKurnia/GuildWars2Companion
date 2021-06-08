@@ -1,6 +1,6 @@
 package stephenwk.com.soa_guildwars2.domain.usecases
 
-import com.example.soa_guildwars2.domain.GeneralRepository
+import stephenwk.com.soa_guildwars2.domain.GeneralRepository
 import javax.inject.Inject
 
 class RemoveApiKey @Inject constructor(

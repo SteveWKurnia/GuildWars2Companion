@@ -1,7 +1,7 @@
 package stephenwk.com.soa_guildwars2.data.networkdata
 
-import com.example.soa_guildwars2.data.models.AchievementsEntityData
-import com.example.soa_guildwars2.data.models.DailyAchievementsEntityData
+import stephenwk.com.soa_guildwars2.data.models.AchievementsEntityData
+import stephenwk.com.soa_guildwars2.data.models.DailyAchievementsEntityData
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query

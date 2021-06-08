@@ -1,7 +1,7 @@
 package stephenwk.com.soa_guildwars2.data.networkdata
 
-import com.example.soa_guildwars2.data.models.AccountEntityData
-import com.example.soa_guildwars2.data.models.WalletEntityData
+import stephenwk.com.soa_guildwars2.data.models.AccountEntityData
+import stephenwk.com.soa_guildwars2.data.models.WalletEntityData
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
 import retrofit2.http.Query

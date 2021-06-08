@@ -3,12 +3,12 @@ package stephenwk.com.soa_guildwars2.app
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.guild.GuildFragment
-import com.example.soa_guildwars2.app.home.HomeFragment
-import com.example.soa_guildwars2.app.character.CharacterFragment
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_main.*
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.character.CharacterFragment
+import stephenwk.com.soa_guildwars2.app.guild.GuildFragment
+import stephenwk.com.soa_guildwars2.app.home.HomeFragment
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {

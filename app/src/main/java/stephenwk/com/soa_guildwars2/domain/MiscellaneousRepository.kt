@@ -1,7 +1,7 @@
 package stephenwk.com.soa_guildwars2.domain
 
-import com.example.soa_guildwars2.domain.datamodel.ColorDataModel
-import com.example.soa_guildwars2.domain.datamodel.TitleDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.ColorDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.TitleDataModel
 import io.reactivex.rxjava3.core.Observable
 
 interface MiscellaneousRepository {

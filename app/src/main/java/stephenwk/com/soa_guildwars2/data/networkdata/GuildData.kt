@@ -1,8 +1,8 @@
 package stephenwk.com.soa_guildwars2.data.networkdata
 
-import com.example.soa_guildwars2.data.models.EmblemResourceEntityData
-import com.example.soa_guildwars2.data.models.GuildEntityData
-import com.example.soa_guildwars2.data.models.GuildMemberEntityData
+import stephenwk.com.soa_guildwars2.data.models.EmblemResourceEntityData
+import stephenwk.com.soa_guildwars2.data.models.GuildEntityData
+import stephenwk.com.soa_guildwars2.data.models.GuildMemberEntityData
 import io.reactivex.rxjava3.core.Observable
 import retrofit2.http.GET
 import retrofit2.http.Path

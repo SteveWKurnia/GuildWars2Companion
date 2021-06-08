@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.R
 import kotlinx.android.synthetic.main.guild_member_recycler_item.view.*
 
 class GuildMemberAdapter: RecyclerView.Adapter<GuildMemberAdapter.MemberViewHolder>() {

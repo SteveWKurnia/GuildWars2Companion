@@ -6,9 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.guild.guilddetail.GuildDetailActivity
-import com.example.soa_guildwars2.domain.datamodel.GuildDataModel
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.guild.guilddetail.GuildDetailActivity
+import stephenwk.com.soa_guildwars2.domain.datamodel.GuildDataModel
 import kotlinx.android.synthetic.main.guild_member_recycler_item.view.*
 import kotlinx.android.synthetic.main.guild_recycler_item.view.*
 

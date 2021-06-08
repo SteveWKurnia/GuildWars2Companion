@@ -14,8 +14,8 @@ import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
 import androidx.activity.viewModels
 import androidx.lifecycle.Observer
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.MainActivity
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.MainActivity
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_api_key.*
 

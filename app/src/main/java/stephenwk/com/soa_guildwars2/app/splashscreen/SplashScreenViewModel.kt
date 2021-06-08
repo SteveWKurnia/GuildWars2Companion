@@ -4,10 +4,10 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.soa_guildwars2.domain.usecases.GetApiKey
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
+import stephenwk.com.soa_guildwars2.domain.usecases.GetApiKey
 
 class SplashScreenViewModel @ViewModelInject constructor(
     private val getApiKey: GetApiKey

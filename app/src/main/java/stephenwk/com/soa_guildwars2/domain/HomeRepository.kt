@@ -1,6 +1,6 @@
 package stephenwk.com.soa_guildwars2.domain
 
-import com.example.soa_guildwars2.domain.datamodel.*
+import stephenwk.com.soa_guildwars2.domain.datamodel.*
 import io.reactivex.rxjava3.core.Observable
 
 interface HomeRepository {

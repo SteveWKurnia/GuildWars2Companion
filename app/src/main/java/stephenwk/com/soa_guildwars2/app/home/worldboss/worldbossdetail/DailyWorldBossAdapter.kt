@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.UtilityHelper.cleanWorldBossUnderscore
-import com.example.soa_guildwars2.app.home.worldboss.WorldBossModel
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.UtilityHelper.cleanWorldBossUnderscore
+import stephenwk.com.soa_guildwars2.app.home.worldboss.WorldBossModel
 import kotlinx.android.synthetic.main.wb_detail_recycler_item.view.*
 import kotlinx.android.synthetic.main.world_boss_home_recycler_item.view.*
 

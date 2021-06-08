@@ -1,10 +1,10 @@
 package stephenwk.com.soa_guildwars2.data.repository
 
-import com.example.soa_guildwars2.data.RetrofitInstance
-import com.example.soa_guildwars2.data.networkdata.MiscellaneousData
-import com.example.soa_guildwars2.domain.MiscellaneousRepository
-import com.example.soa_guildwars2.domain.datamodel.ColorDataModel
-import com.example.soa_guildwars2.domain.datamodel.TitleDataModel
+import stephenwk.com.soa_guildwars2.data.RetrofitInstance
+import stephenwk.com.soa_guildwars2.data.networkdata.MiscellaneousData
+import stephenwk.com.soa_guildwars2.domain.MiscellaneousRepository
+import stephenwk.com.soa_guildwars2.domain.datamodel.ColorDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.TitleDataModel
 import io.reactivex.rxjava3.core.Observable
 import javax.inject.Inject
 

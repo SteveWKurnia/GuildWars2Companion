@@ -5,9 +5,9 @@ import android.os.Bundle
 import android.view.View
 import androidx.activity.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.soa_guildwars2.R
-import com.example.soa_guildwars2.app.home.HomeViewModel
-import com.example.soa_guildwars2.app.home.dailyachievements.DailyAchievementsAdapter
+import stephenwk.com.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.app.home.HomeViewModel
+import stephenwk.com.soa_guildwars2.app.home.dailyachievements.DailyAchievementsAdapter
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.android.synthetic.main.activity_daily_detail.*
 

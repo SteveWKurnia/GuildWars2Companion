@@ -4,8 +4,8 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.soa_guildwars2.domain.datamodel.GuildDataModel
-import com.example.soa_guildwars2.domain.usecases.GetAllGuildData
+import stephenwk.com.soa_guildwars2.domain.datamodel.GuildDataModel
+import stephenwk.com.soa_guildwars2.domain.usecases.GetAllGuildData
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers

@@ -6,20 +6,19 @@ import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.soa_guildwars2.app.home.dailyachievements.AchievementsModel
-import com.example.soa_guildwars2.app.home.dailyachievements.AchievementsModelMapper
-import com.example.soa_guildwars2.app.home.worldboss.WorldBossModel
-import com.example.soa_guildwars2.domain.datamodel.*
-import com.example.soa_guildwars2.domain.usecases.*
+import stephenwk.com.soa_guildwars2.app.home.dailyachievements.AchievementsModelMapper
+import stephenwk.com.soa_guildwars2.domain.datamodel.*
+import stephenwk.com.soa_guildwars2.domain.usecases.*
 import dagger.hilt.android.qualifiers.ApplicationContext
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
+import stephenwk.com.soa_guildwars2.app.home.worldboss.WorldBossModel
+import stephenwk.com.soa_guildwars2.app.home.dailyachievements.AchievementsModel
 
 class HomeViewModel @ViewModelInject constructor(
         @ApplicationContext context: Context,
         private val removeApiKey: RemoveApiKey,
-        private val getApiKey: GetApiKey,
         private val getAccountData: GetAccountData,
         private val getWalletData: GetWalletData,
         private val getAllWorldBoss: GetAllWorldBoss,

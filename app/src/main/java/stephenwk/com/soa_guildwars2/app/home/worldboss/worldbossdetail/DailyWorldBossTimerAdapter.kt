@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.R
 import kotlinx.android.synthetic.main.chip_wb_detail.view.*
 
 class DailyWorldBossTimerAdapter(

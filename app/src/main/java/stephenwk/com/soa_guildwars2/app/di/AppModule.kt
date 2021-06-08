@@ -1,7 +1,7 @@
 package stephenwk.com.soa_guildwars2.app.di
 
-import com.example.soa_guildwars2.data.repository.*
-import com.example.soa_guildwars2.domain.*
+import stephenwk.com.soa_guildwars2.data.repository.*
+import stephenwk.com.soa_guildwars2.domain.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

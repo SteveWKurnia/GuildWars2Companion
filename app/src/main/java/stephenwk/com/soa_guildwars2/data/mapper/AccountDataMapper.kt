@@ -1,7 +1,7 @@
 package stephenwk.com.soa_guildwars2.data.mapper
 
-import com.example.soa_guildwars2.data.models.AccountEntityData
-import com.example.soa_guildwars2.domain.datamodel.AccountDataModel
+import stephenwk.com.soa_guildwars2.data.models.AccountEntityData
+import stephenwk.com.soa_guildwars2.domain.datamodel.AccountDataModel
 import javax.inject.Inject
 
 class AccountDataMapper @Inject constructor() {

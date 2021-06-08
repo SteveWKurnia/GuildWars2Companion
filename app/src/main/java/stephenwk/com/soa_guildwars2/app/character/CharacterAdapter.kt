@@ -5,7 +5,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
-import com.example.soa_guildwars2.R
+import stephenwk.com.soa_guildwars2.R
 import kotlinx.android.synthetic.main.character_recycler_item.view.*
 
 class CharacterAdapter: RecyclerView.Adapter<CharacterAdapter.CharacterViewHolder>() {

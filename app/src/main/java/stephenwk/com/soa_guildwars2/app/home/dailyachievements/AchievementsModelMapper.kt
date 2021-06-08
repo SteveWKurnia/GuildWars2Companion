@@ -1,6 +1,6 @@
 package stephenwk.com.soa_guildwars2.app.home.dailyachievements
 
-import com.example.soa_guildwars2.domain.datamodel.AchievementDataModel
+import stephenwk.com.soa_guildwars2.domain.datamodel.AchievementDataModel
 import javax.inject.Inject
 
 class AchievementsModelMapper @Inject constructor(){
