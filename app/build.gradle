@@ -11,7 +11,7 @@ android {
     buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.example.soa_guildwars2"
+        applicationId "stephenwk.com.soa_guildwars2"
         minSdkVersion 23
         targetSdkVersion 30
         versionCode 1
