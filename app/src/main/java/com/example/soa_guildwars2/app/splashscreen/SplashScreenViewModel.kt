@@ -1,17 +1,19 @@
 package com.example.soa_guildwars2.app.splashscreen
 
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.soa_guildwars2.domain.usecases.GetApiKey
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
+import javax.inject.Inject
 
-class SplashScreenViewModel @ViewModelInject constructor(
+@HiltViewModel
+class SplashScreenViewModel @Inject constructor(
     private val getApiKey: GetApiKey
-): ViewModel() {
+) : ViewModel() {
 
     private val _api_key: MutableLiveData<String> by lazy {
         MutableLiveData<String>()
@@ -24,7 +26,7 @@ class SplashScreenViewModel @ViewModelInject constructor(
         getApiKey.execute()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
-            .subscribe(object: DisposableObserver<String>() {
+            .subscribe(object : DisposableObserver<String>() {
                 override fun onNext(t: String?) {
                     _api_key.postValue(t)
                 }

@@ -1,21 +1,20 @@
 package com.example.soa_guildwars2.app.guild
 
-import android.util.Log
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.example.soa_guildwars2.domain.datamodel.EmblemResourceDataModel
 import com.example.soa_guildwars2.domain.datamodel.GuildDataModel
 import com.example.soa_guildwars2.domain.usecases.GetAllGuildData
-import com.example.soa_guildwars2.domain.usecases.GetEmblemResource
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
+import javax.inject.Inject
 
-class GuildViewModel @ViewModelInject constructor(
+@HiltViewModel
+class GuildViewModel @Inject constructor(
     private val getAllGuildData: GetAllGuildData
-): ViewModel() {
+) : ViewModel() {
 
     private val _allGuildData: MutableLiveData<List<GuildDataModel>> by lazy {
         MutableLiveData<List<GuildDataModel>>()

@@ -1,7 +1,6 @@
 package com.example.soa_guildwars2.app.character
 
 import android.util.Log
-import androidx.hilt.lifecycle.ViewModelInject
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -11,16 +10,19 @@ import com.example.soa_guildwars2.domain.usecases.GetCharacterDetail
 import com.example.soa_guildwars2.domain.usecases.GetCharacterList
 import com.example.soa_guildwars2.domain.usecases.GetCharactersData
 import com.example.soa_guildwars2.domain.usecases.GetTitle
+import dagger.hilt.android.lifecycle.HiltViewModel
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.observers.DisposableObserver
 import io.reactivex.rxjava3.schedulers.Schedulers
+import javax.inject.Inject
 
-class CharacterViewModel @ViewModelInject constructor(
-        private val getCharactersData: GetCharactersData,
-        private val getCharacterList: GetCharacterList,
-        private val getCharacterDetail: GetCharacterDetail,
-        private val getTitle: GetTitle
-): ViewModel() {
+@HiltViewModel
+class CharacterViewModel @Inject constructor(
+    private val getCharactersData: GetCharactersData,
+    private val getCharacterList: GetCharacterList,
+    private val getCharacterDetail: GetCharacterDetail,
+    private val getTitle: GetTitle
+) : ViewModel() {
 
     private val _characterData: MutableLiveData<List<CharacterModel>> by lazy {
         MutableLiveData<List<CharacterModel>>()
@@ -38,42 +40,43 @@ class CharacterViewModel @ViewModelInject constructor(
 
     fun getCharactersData() {
         getCharactersData.execute()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(Schedulers.io())
-                .subscribe(object: DisposableObserver<List<CharacterDataModel>>() {
-                    override fun onNext(data: List<CharacterDataModel>?) {
-                        val charList = mutableListOf<CharacterModel>()
-                        data?.forEach {
-                            Log.d("TestingCharacterInVM", it.name)
-                            charList.add(
-                                CharacterModel(
-                                    name = it.name,
-                                    gender = it.gender,
-                                    race = it.race,
-                                    profession = it.profession,
-                                    level = it.level,
-                                    title = it.title
-                            ))
-                        }
-                        _characterData.postValue(charList)
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
+            .subscribe(object : DisposableObserver<List<CharacterDataModel>>() {
+                override fun onNext(data: List<CharacterDataModel>?) {
+                    val charList = mutableListOf<CharacterModel>()
+                    data?.forEach {
+                        Log.d("TestingCharacterInVM", it.name)
+                        charList.add(
+                            CharacterModel(
+                                name = it.name,
+                                gender = it.gender,
+                                race = it.race,
+                                profession = it.profession,
+                                level = it.level,
+                                title = it.title
+                            )
+                        )
                     }
+                    _characterData.postValue(charList)
+                }
 
-                    override fun onError(e: Throwable?) {
-                        Log.d("TestingCharacter", e?.message.toString())
-                    }
+                override fun onError(e: Throwable?) {
+                    Log.d("TestingCharacter", e?.message.toString())
+                }
 
-                    override fun onComplete() {
-                        //no-implementation
-                    }
+                override fun onComplete() {
+                    //no-implementation
+                }
 
-                })
+            })
     }
 
     fun getCharacterList() {
         getCharacterList.execute()
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
-            .subscribe(object: DisposableObserver<List<String>>() {
+            .subscribe(object : DisposableObserver<List<String>>() {
                 override fun onNext(data: List<String>?) {
                     data?.forEach {
                         getCharacterDetail(it)
@@ -95,7 +98,7 @@ class CharacterViewModel @ViewModelInject constructor(
         getCharacterDetail.execute(name)
             .observeOn(AndroidSchedulers.mainThread())
             .subscribeOn(Schedulers.io())
-            .subscribe(object: DisposableObserver<CharacterDataModel>() {
+            .subscribe(object : DisposableObserver<CharacterDataModel>() {
                 override fun onNext(data: CharacterDataModel?) {
                     data?.let {
                         getTitle(it)
@@ -120,61 +123,65 @@ class CharacterViewModel @ViewModelInject constructor(
         }
         if (title == "") {
             getTitle.execute(title)
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribeOn(Schedulers.io())
-                    .subscribe(object: DisposableObserver<TitleDataModel>() {
-                        override fun onNext(data: TitleDataModel?) {
-                            //no-implementation
-                        }
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(object : DisposableObserver<TitleDataModel>() {
+                    override fun onNext(data: TitleDataModel?) {
+                        //no-implementation
+                    }
 
-                        override fun onError(e: Throwable?) {
-                            Log.d("TestingCharacterInList", e?.message.toString())
-                            val temp = _characterDetails.value ?: mutableListOf()
-                            temp.add(CharacterModel(
+                    override fun onError(e: Throwable?) {
+                        Log.d("TestingCharacterInList", e?.message.toString())
+                        val temp = _characterDetails.value ?: mutableListOf()
+                        temp.add(
+                            CharacterModel(
+                                name = characterModel.name,
+                                gender = characterModel.gender,
+                                race = characterModel.race,
+                                profession = characterModel.profession,
+                                level = characterModel.level,
+                                title = "No title."
+                            )
+                        )
+                        _characterDetails.postValue(temp)
+                    }
+
+                    override fun onComplete() {
+//                            TODO("Not yet implemented")
+                    }
+
+                })
+        } else {
+            getTitle.execute(title)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe(object : DisposableObserver<TitleDataModel>() {
+                    override fun onNext(data: TitleDataModel?) {
+                        val temp = _characterDetails.value ?: mutableListOf()
+                        data?.let {
+                            temp.add(
+                                CharacterModel(
                                     name = characterModel.name,
                                     gender = characterModel.gender,
                                     race = characterModel.race,
                                     profession = characterModel.profession,
                                     level = characterModel.level,
-                                    title = "No title."
-                            ))
+                                    title = data.title
+                                )
+                            )
                             _characterDetails.postValue(temp)
                         }
+                    }
 
-                        override fun onComplete() {
+                    override fun onError(e: Throwable?) {
+                        Log.d("TestingCharacterInList", e?.message.toString())
+                    }
+
+                    override fun onComplete() {
 //                            TODO("Not yet implemented")
-                        }
+                    }
 
-                    })
-        } else {
-            getTitle.execute(title)
-                    .observeOn(AndroidSchedulers.mainThread())
-                    .subscribeOn(Schedulers.io())
-                    .subscribe(object: DisposableObserver<TitleDataModel>() {
-                        override fun onNext(data: TitleDataModel?) {
-                            val temp = _characterDetails.value ?: mutableListOf()
-                            data?.let {
-                                temp.add(CharacterModel(
-                                        name = characterModel.name,
-                                        gender = characterModel.gender,
-                                        race = characterModel.race,
-                                        profession = characterModel.profession,
-                                        level = characterModel.level,
-                                        title = data.title
-                                ))
-                                _characterDetails.postValue(temp)
-                            }
-                        }
-
-                        override fun onError(e: Throwable?) {
-                            Log.d("TestingCharacterInList", e?.message.toString())
-                        }
-
-                        override fun onComplete() {
-//                            TODO("Not yet implemented")
-                        }
-
-                    })
+                })
         }
     }
 }
